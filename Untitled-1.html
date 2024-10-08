@@ -6,25 +6,35 @@
     <title>Document</title>
 </head>
 <body>
+    <form id="frm">
+        <p>Введите числа через пробел</p>
+        <input type="text" id="arr">
+        <p>Введите число k</p>
+        <input type="text" id="k">
+        <input type="submit" onclick="fun()" value="Рассчитать">
+    </form>
     <script>
-        var arr = [5, 7, 2, 9];
-        var k = 1;
-        var res = 0;
-        for (var i = 0; i < arr.length; i++){
-            if(arr[i] > k){
-                if(res == 0){
-                    res = arr[i];
-                }
-                else{
-                    res *= arr[i];
+        function fun(){
+            var arr = [5, 7, 2, 9];
+            var k = 1;
+            var res = 0;
+            for (var i = 0; i < arr.length; i++){
+                if(arr[i] > k){
+                    if(res == 0){
+                        res = arr[i];
+                    }
+                    else{
+                        res *= arr[i];
+                    }
                 }
             }
-        }
-        if (res == 0){
-            alert ("Числа не найдены");
-        }
-        else {
-            alert (res)
+            if (res == 0){
+                alert ("Числа не найдены");
+            }
+            else {
+                alert (res)
+            }
+
         }
     </script>
 </body>
